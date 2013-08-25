@@ -1,0 +1,14 @@
+<div class="large-12 columns">
+  <div class='large-2 columns'>
+    <span class='button round disabled'>{{ post.date | date_to_string }}</span>
+  </div>
+  <div class='large-10 columns'>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <p>{{ post.excerpt }}</p>
+    {% for tag in post.tags %}
+      <span class="radius secondary label"><a href="/tag/{{ tag }}">{{ tag }}</a></span>
+    {% endfor %}
+    <br/>
+    <br/>
+  </div>
+</div>

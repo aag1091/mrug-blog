@@ -1,0 +1,38 @@
+<div class="large-3 columns">
+  <div class="large-12 columns">
+    <div class="section-container tabs" data-section="tabs">
+      <section>
+        <p class="title" data-section-title><a href="#">Category</a></p>
+        <div class="content" data-section-content>
+          <ul class="side-nav">
+            {% for category in site.categories %}
+              <li><a href="/categories/{{ category[0] }}/">{{ category[0] }}</a></li>
+              <li class="divider"></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+      <section>
+        <p class="title" data-section-title><a href="#">Recent</a></p>
+        <div class="content" data-section-content>
+          <ul class="side-nav">
+            {% for post in site.posts limit:5 %}
+               <li>
+                 <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>  
+               </li>
+               <li class="divider"></li>
+            {% endfor %}  
+          </ul>
+        </div>
+      </section>
+      <section>
+        <p class="title" data-section-title><a href="#">Tags</a></p>
+        <div class="content" data-section-content>
+          {% for tag in site.tags limit:25 %}
+            <span class="radius secondary label"><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></span>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
