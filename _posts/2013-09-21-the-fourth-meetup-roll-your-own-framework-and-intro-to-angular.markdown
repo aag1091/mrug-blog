@@ -3,9 +3,11 @@ layout: post
 title: The Fourth Meetup - Roll your own framework and Angular Intro
 category: Meetup
 author: Avinash Gosavi
-tags: mumbai ruby rails meetup framework angular
-excerpt: The fourth Meetup
+author_profile_url: http://twitter.com/aag1091
+author_email: aag1091@gmail.com
+tags: ruby-framework angular
+excerpt: Creating a small framework from scratch for playing chess and Introduction to angular
 
 ---
 
-The fourth Meetup
+Most of use rails for creating web applications for our day job. It is stable, lots of pretty cool features 

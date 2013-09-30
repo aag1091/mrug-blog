@@ -3,11 +3,14 @@
     <span class='button round disabled'>{{ post.date | date_to_string }}</span>
   </div>
   <div class='large-10 columns'>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
     <p>{{ post.excerpt }}</p>
-    {% for tag in post.tags %}
-      <span class="radius secondary label"><a href="/tag/{{ tag }}">{{ tag }}</a></span>
-    {% endfor %}
+    <!--  <p><a href="{{ post.author_profile_url }}">{{ post.author }}({{ post.author_email }})</a></p> -->
+    <p>
+      {% for tag in post.tags %}
+        <span class="radius secondary label"><a href="/tag/{{ tag }}">{{ tag }}</a></span>
+      {% endfor %}
+    </p>
     <br/>
     <br/>
   </div>
